@@ -136,3 +136,15 @@ query:	SELECT e.first_name AS BOSS ,COUNT(e.employee_id) AS SUBORDINATES  FROM e
 
 12)	DISPLAY THE NAMES, DESIGNATION AND SALARIES OF ALL EMPLOYEES WHO HAVE MANAGER ALONG WITH MANAGER'S NAME, DESIGNATION AND MANAGER'S SALARY.
 	(SELF-JOIN)
+
+query:	SELECT e.employee_id,e.first_name,e.job_id,e.salary,f.first_name AS manger_name,f.job_id AS designation,f.salary AS manager_salary FROM employees e INNER JOIN employees f ON e.manager_id=f.employee_id;
+
+
+14)	 FIND THE 2ND MINIMUM SALARY OF THE EMPLOYEE.
+
+query:	 SELECT DISTINCT(salary) FROM employees ORDER BY salary LIMIT 1,1;
+
+
+15)	 FIND THE MAX 3 SALARIES FROM EMPLOYEE TABLE.
+
+query:	 SELECT DISTINCT(salary) FROM employees ORDER BY salary DESC LIMIT 2,1;
