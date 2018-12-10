@@ -18,10 +18,10 @@ query:  SELECT MIN (e.salary),e.department_id FROM employees AS e GROUP BY e.dep
 
 3)	WRITE A QUERY  BASED ON  FOLLOWING RESULT. 
 
-	EMPNO	ENAME	JOB	SAL	DEPTNO	DNAME
+	EMPNO	ENAME	JOB	SAL	DEPTNO	   DNAME
 	7369	SMITH	CLERK	800	20	RESEARCH
-	7900	JAMES     	CLERK	950	30	SALES
-	7934	MILLER     	CLERK	1300	10	ACCOUNTING
+	7900	JAMES   CLERK	950	30	SALES
+	7934	MILLER  CLERK	1300	10	ACCOUNTING
 
 query:	SELECT e.employee_id,e.first_name,e.job_id,e.salary,e.department_id,d.department_name FROM employees e JOIN departments AS d ON d.department_id=e.department_id;
 
